@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 datosbd\PostreProvider.class
 gui\InterfazAndrea.class
 gui\InterfazPrueba$1.class
@@ -5,3 +6,29 @@ gui\InterfazAndrea$2.class
 gui\InterfazPrueba.class
 gui\InterfazAndrea$1.class
 gui\InterfazPrueba$2.class
+=======
+gui\InterfazNicohl$2.class
+gui\InterfazYawar.class
+gui\InterfazNicohl$3.class
+datosbd\ReposteriaGrupal.class
+gui\InterfazNicohl$1.class
+gui\creartarea\InterfazMenu$2.class
+gui\InterfazPrueba.class
+gui\creartarea\InterfazMenu.class
+gui\InterfazAndrea$1.class
+gui\InterfazNicohl.class
+gui\InterfazPrueba$2.class
+datosbd\PostreProvider.class
+gui\InterfazAndrea.class
+gui\InterfazPrueba$1.class
+gui\InterfazJessica$2.class
+gui\InterfazJessica$1.class
+gui\InterfazJessica.class
+datosbd\Conexion.class
+gui\creartarea\InterfazMenu$1.class
+gui\InterfazAndrea$2.class
+gui\InterfazYawar$1.class
+gui\InterfazYawar$2.class
+gui\creartarea\InterfazCrearTarea$1.class
+gui\creartarea\InterfazCrearTarea.class
+>>>>>>> 0e10d0cdd51821e631102dc0a5e1d5e30eb4c5a9
