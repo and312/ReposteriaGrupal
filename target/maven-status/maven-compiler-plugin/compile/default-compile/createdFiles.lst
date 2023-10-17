@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+datosbd\PostreProvider.class
+gui\InterfazAndrea.class
+gui\InterfazPrueba$1.class
+gui\InterfazAndrea$2.class
+gui\InterfazPrueba.class
+gui\InterfazAndrea$1.class
+gui\InterfazPrueba$2.class
+=======
 gui\InterfazNicohl$2.class
 datosbd\ReposteriaGrupal.class
 gui\creartarea\InterfazMenu$2.class
@@ -30,3 +39,4 @@ gui\InterfazYawar$2.class
 Franz\Bienvenido$1.class
 Franz\Inicio.class
 gui\creartarea\InterfazCrearTarea.class
+>>>>>>> 0e10d0cdd51821e631102dc0a5e1d5e30eb4c5a9
