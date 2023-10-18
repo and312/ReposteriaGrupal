@@ -65,6 +65,12 @@ public class InterfazCrearTarea extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(100, 204, 197));
 
+        txtTitulo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTituloActionPerformed(evt);
+            }
+        });
+
         jLabel2.setText("Tarea");
 
         jTextArea1.setColumns(20);
@@ -159,6 +165,10 @@ public class InterfazCrearTarea extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtTituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTituloActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTituloActionPerformed
 
     /**
      * @param args the command line arguments
