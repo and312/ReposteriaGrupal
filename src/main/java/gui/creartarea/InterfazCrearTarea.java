@@ -6,6 +6,7 @@ package gui.creartarea;
 
 import datosbd.Conexion;
 import java.awt.HeadlessException;
+import java.awt.event.ActionEvent;
 import java.util.HashMap;
 import java.util.Map;
 import javax.swing.JOptionPane;
@@ -75,7 +76,13 @@ public class InterfazCrearTarea extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(100, 204, 197));
 
-        jLabel2.setText("Título");
+        txtTitulo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTituloActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setText("Tarea");
 
         txtInstruccion.setColumns(20);
         txtInstruccion.setRows(5);
