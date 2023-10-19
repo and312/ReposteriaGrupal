@@ -28,6 +28,7 @@ public class Archivos extends javax.swing.JFrame {
     public Archivos() {
         initComponents();
     }
+    /*
     private void crear() {
         int id = (int) (Math.random() * 100000);
         
@@ -44,7 +45,7 @@ public class Archivos extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Error al guardar");
         }
     }
-    
+    */
     private void borrarCampos() {
         txtNombre.setText("");
         txtarchivos.setText("");
@@ -188,7 +189,7 @@ public class Archivos extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNombreActionPerformed
 
     private void txtcrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcrearActionPerformed
-         crear();
+        // crear();
         String nombreArchivo = txtNombre.getText();
       String carpeta = System.getProperty("user.dir");
       String direccionCompleta = carpeta + "/" + nombreArchivo + ".txt";
