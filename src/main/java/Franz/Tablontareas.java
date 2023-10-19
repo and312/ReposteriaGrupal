@@ -1,6 +1,6 @@
 package Franz;
-public class TablonTareas extends javax.swing.JFrame {
-    public TablonTareas() {
+public class Tablontareas extends javax.swing.JFrame {
+    public Tablontareas() {
         initComponents();
     }
     @SuppressWarnings("unchecked")
