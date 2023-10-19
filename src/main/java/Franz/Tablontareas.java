@@ -37,6 +37,11 @@ public class TablonTareas extends javax.swing.JFrame {
         });
 
         jToggleButton2.setText("Publicar");
+        jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton2ActionPerformed(evt);
+            }
+        });
 
         jTextField1.setText("Anuncia algo a tu clase....");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {

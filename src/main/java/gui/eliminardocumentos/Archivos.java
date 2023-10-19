@@ -5,11 +5,16 @@
 package gui.eliminardocumentos;
 
 import datosbd.ReposteriaGrupal;
+import gui.creartarea.TareaProvider;
+import java.awt.HeadlessException;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -23,7 +28,28 @@ public class Archivos extends javax.swing.JFrame {
     public Archivos() {
         initComponents();
     }
-
+    /*
+    private void crear() {
+        int id = (int) (Math.random() * 100000);
+        
+        try {
+            Map<String, Object> datosTarea = new HashMap<>();
+            datosTarea.put("SELCCIONE ARCHIVOS", txtNombre.getText());
+            datosTarea.put("ESCRIBIR ARCHIVOS", txtarchivos.getText());
+            //datosTarea.put("Adjuntar", "");
+            
+            TareaProvider.crearTarea("Tarea", String.valueOf(id), datosTarea);
+            JOptionPane.showMessageDialog(null, "Se creó la tarea");
+            borrarCampos();
+        }catch(HeadlessException e) {
+            JOptionPane.showMessageDialog(null, "Error al guardar");
+        }
+    }
+    */
+    private void borrarCampos() {
+        txtNombre.setText("");
+        txtarchivos.setText("");
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -42,6 +68,7 @@ public class Archivos extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         txtarchivos = new javax.swing.JTextArea();
         txtcrear = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -92,6 +119,13 @@ public class Archivos extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setText("LIMPIAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
         panel1.setLayout(panel1Layout);
         panel1Layout.setHorizontalGroup(
@@ -103,14 +137,15 @@ public class Archivos extends javax.swing.JFrame {
                         .addGap(19, 19, 19)
                         .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(panel1Layout.createSequentialGroup()
                         .addGap(45, 45, 45)
                         .addComponent(txtcrear)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton1)
+                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(38, Short.MAX_VALUE))
         );
         panel1Layout.setVerticalGroup(
@@ -129,7 +164,9 @@ public class Archivos extends javax.swing.JFrame {
                         .addGap(38, 38, 38)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
-                .addComponent(txtcrear)
+                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtcrear)
+                    .addComponent(jButton1))
                 .addGap(30, 30, 30))
         );
 
@@ -152,7 +189,8 @@ public class Archivos extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNombreActionPerformed
 
     private void txtcrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcrearActionPerformed
-         String nombreArchivo = txtNombre.getText();
+        // crear();
+        String nombreArchivo = txtNombre.getText();
       String carpeta = System.getProperty("user.dir");
       String direccionCompleta = carpeta + "/" + nombreArchivo + ".txt";
       FileWriter ubicacion = null;
@@ -168,6 +206,10 @@ public class Archivos extends javax.swing.JFrame {
       
       }   // TODO add your handling code here:
     }//GEN-LAST:event_txtcrearActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       Limpiar();  // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -205,6 +247,7 @@ public class Archivos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -215,4 +258,11 @@ public class Archivos extends javax.swing.JFrame {
     private javax.swing.JTextArea txtarchivos;
     private javax.swing.JButton txtcrear;
     // End of variables declaration//GEN-END:variables
+
+ private void Limpiar() {
+        txtNombre.setText("");
+        txtarchivos.setText("");
+        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
 }

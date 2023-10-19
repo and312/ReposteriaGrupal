@@ -1,7 +1,9 @@
 Franz\InterfazCalificarNotas$4.class
 Franz\InterfazCalificarNotas$3.class
 datosbd\ReposteriaGrupal.class
+Franz\TablonTareas$3.class
 gui\creartarea\InterfazMenu$2.class
+<<<<<<< HEAD
 Franz\InterfazCalificarNotas.class
 gui\InterfazPrueba.class
 gui\creartarea\InterfazMenu.class
@@ -10,8 +12,51 @@ gui\InterfazPrueba$2.class
 datosbd\PostreProvider.class
 Franz\InterfazCalificarNotas$1.class
 gui\InterfazAndrea.class
+=======
+Franz\TablonTareas.class
+gui\InterfazAndrea$1.class
+gui\InterfazNicohl.class
+gui\EliminarTarea$1.class
+gui\InicioDocente$1.class
+datosbd\PostreProvider.class
+gui\InterfazAndrea.class
+gui\InicioDocente.class
+gui\InterfazJessica$2.class
+gui\InterfazJessica$1.class
+gui\InterfazJessica.class
+Franz\TablonTareas$1.class
+gui\InterfazAndrea$2.class
+gui\EliminarTarea$2.class
+gui\eliminardocumentos\Archivos$3.class
+gui\InterfazYawar$1.class
+Franz\PermitirSubirNota$1.class
+Franz\TablonTareas$4.class
+gui\creartarea\InterfazCrearTarea$1.class
+gui\InterfazYawar.class
+gui\InterfazNicohl$3.class
+gui\creartarea\InterfazCrearTarea$2.class
+gui\InterfazNicohl$1.class
+gui\InterfazPrueba.class
+gui\creartarea\InterfazMenu.class
+gui\eliminardocumentos\Archivos$1.class
+Franz\TablonTareas$2.class
+gui\InterfazPrueba$2.class
+Franz\PermitirSubirNota.class
+>>>>>>> d77e8bbf6fdd95a4b9aca9d6f77f96eabc2c374e
 gui\InterfazPrueba$1.class
 datosbd\Conexion.class
+Franz\TablonTareas$5.class
 gui\creartarea\InterfazMenu$1.class
+<<<<<<< HEAD
 gui\InterfazAndrea$2.class
 Franz\InterfazCalificarNotas$2.class
+=======
+gui\creartarea\TareaProvider.class
+gui\InicioDocente$2.class
+gui\eliminardocumentos\Archivos.class
+gui\eliminardocumentos\ArchivosProvider.class
+gui\EliminarTarea.class
+gui\eliminardocumentos\Archivos$4.class
+gui\InterfazYawar$2.class
+gui\creartarea\InterfazCrearTarea.class
+>>>>>>> d77e8bbf6fdd95a4b9aca9d6f77f96eabc2c374e
