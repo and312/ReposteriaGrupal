@@ -42,6 +42,8 @@ public class TareadeClase extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(100, 204, 197));
+
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("Titulo");
 
@@ -54,7 +56,17 @@ public class TareadeClase extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel5.setText("Instrucciones");
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtTitulo.setBackground(new java.awt.Color(218, 255, 251));
+
+        txtInstrucciones.setBackground(new java.awt.Color(218, 255, 251));
+
+        txtNota.setBackground(new java.awt.Color(218, 255, 251));
+
+        txtFecha.setBackground(new java.awt.Color(218, 255, 251));
+
+        jButton1.setBackground(new java.awt.Color(23, 107, 135));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(218, 255, 251));
         jButton1.setText("Guardar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -62,10 +74,13 @@ public class TareadeClase extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jButton2.setBackground(new java.awt.Color(23, 107, 135));
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(218, 255, 251));
         jButton2.setText("Cancelar");
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(4, 54, 74));
         jLabel1.setText("Tarea");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -152,7 +167,7 @@ public class TareadeClase extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         try {
-            guardarTarea();
+            guardarTarea();  
         } catch (ParseException ex) {
             Logger.getLogger(TareadeClase.class.getName()).log(Level.SEVERE, null, ex);
         }
