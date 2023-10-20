@@ -5,7 +5,6 @@
 package gui.eliminardocumentos;
 
 import datosbd.ReposteriaGrupal;
-import gui.creartarea.TareaProvider;
 import java.awt.HeadlessException;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
