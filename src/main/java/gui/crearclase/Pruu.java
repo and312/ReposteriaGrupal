@@ -58,7 +58,7 @@ public class Pruu extends javax.swing.JFrame {
             }
         });
 
-        panel.setLayout(new java.awt.GridLayout(0, 3));
+        panel.setLayout(new java.awt.GridLayout(0, 3, 5, 0));
         jScrollPane1.setViewportView(panel);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);

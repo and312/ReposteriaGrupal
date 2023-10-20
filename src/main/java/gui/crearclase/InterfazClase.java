@@ -5,6 +5,7 @@
 package gui.crearclase;
 
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 import javax.swing.JButton;
 
 /**
@@ -20,7 +21,11 @@ public class InterfazClase extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         
-        ClaseProvider.cargarCursos(pnlCurso);
+        try {
+            ClaseProvider.cargarCursos(pnlCurso);
+        }catch(Exception e) {
+            System.err.println("Error: " + e.getMessage());
+        }
     }
 
     /**
@@ -68,6 +73,7 @@ public class InterfazClase extends javax.swing.JFrame {
                 .addContainerGap(28, Short.MAX_VALUE))
         );
 
+        pnlCurso.setBackground(new java.awt.Color(218, 255, 251));
         pnlCurso.setLayout(new java.awt.GridLayout(0, 3));
         jScrollPane1.setViewportView(pnlCurso);
 

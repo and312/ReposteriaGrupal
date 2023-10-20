@@ -20,6 +20,7 @@ import javax.swing.table.DefaultTableModel;
  * @author sound
  */
 public class ClaseProvider {
+    CollectionReference reference;
     public static Firestore db;
     
     public static boolean crearClase(String coleccion, String documento, Map<String, Object> data) {
@@ -37,7 +38,7 @@ public class ClaseProvider {
         return seGuardo;
     }
     
-    public static void cargarCursos(JPanel pnlCurso) {
+    public static void cargarCursos(JPanel pnlCurso) {   
         try {
             CollectionReference clases = Conexion.db.collection("Clase");
             ApiFuture<QuerySnapshot> querySnap = clases.get();

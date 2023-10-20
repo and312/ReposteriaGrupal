@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 gui\tarea\EliminarTarea$2.class
 Franz\Tablontareas$4.class
 gui\creartarea\InterfazMenu$2.class
@@ -29,9 +27,9 @@ gui\tarea\TareaProvider.class
 Franz\Tablontareas$1.class
 gui\creartarea\TareaProvider.class
 gui\InterfazYawar$2.class
+gui\crearclase\Pruu$2.class
 gui\InterfazNicohl$2.class
 gui\eliminardocumentos\Archivos$2.class
-gui\tarea\InicioDocente$2.class
 Franz\InterfazCalificarNotas$3.class
 datosbd\ReposteriaGrupal.class
 Franz\InterfazCalificarNotas.class
@@ -41,11 +39,14 @@ gui\InterfazNicohl.class
 datosbd\PostreProvider.class
 gui\crearclase\InterfazClase.class
 Franz\Tablontareas$2.class
+gui\crearclase\ModalClase.class
+gui\crearclase\Pruu$1.class
 gui\InterfazYawar$1.class
 gui\tarea\EliminarTarea.class
 gui\creartarea\InterfazCrearTarea$1.class
 Franz\InterfazCalificarNotas$4.class
 gui\InterfazNicohl$3.class
+gui\crearclase\Pruu.class
 Franz\Tablontareas$3.class
 gui\tarea\EliminarTarea$1.class
 gui\InterfazPrueba.class
@@ -58,7 +59,7 @@ datosbd\Conexion.class
 gui\creartarea\InterfazMenu$1.class
 gui\eliminardocumentos\Archivos.class
 gui\eliminardocumentos\ArchivosProvider.class
+gui\tarea\EliminarTarea$4.class
 gui\eliminardocumentos\Archivos$4.class
 gui\creartarea\InterfazCrearTarea.class
 gui\tarea\InicioDocente.class
->>>>>>> 93b7e6d77a12b7b5961b78c9b4847eec4827c5b5

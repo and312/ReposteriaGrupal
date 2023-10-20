@@ -179,6 +179,8 @@ public class InterfazCrearClase extends javax.swing.JFrame {
 
     private void crear() {
         int id = (int) (Math.random() * 100000);
+        GeneracionCodigo cod = new GeneracionCodigo();
+        String codigo = cod.generarRandomString();
         
         try {
             Map<String, Object> datosClase = new HashMap<>();
@@ -186,6 +188,7 @@ public class InterfazCrearClase extends javax.swing.JFrame {
             datosClase.put("Seccion", txtSeccion.getText());
             datosClase.put("Materia", txtMateria.getText());
             datosClase.put("Aula", txtAula.getText());
+            datosClase.put("Código", codigo);
             
             ClaseProvider.crearClase("Clase", String.valueOf(id), datosClase);
             JOptionPane.showMessageDialog(null, "Se creó la clase");
