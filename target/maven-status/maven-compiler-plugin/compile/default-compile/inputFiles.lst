@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\sound\Documents\NetBeansProjects\ReposteriaGrupal\src\main\java\gui\tarea\EliminarTarea.java
 C:\Users\sound\Documents\NetBeansProjects\ReposteriaGrupal\src\main\java\datosbd\PostreProvider.java
 C:\Users\sound\Documents\NetBeansProjects\ReposteriaGrupal\src\main\java\gui\InterfazYawar.java
@@ -22,3 +23,27 @@ C:\Users\sound\Documents\NetBeansProjects\ReposteriaGrupal\src\main\java\gui\Int
 C:\Users\sound\Documents\NetBeansProjects\ReposteriaGrupal\src\main\java\gui\tarea\TareadeClase.java
 C:\Users\sound\Documents\NetBeansProjects\ReposteriaGrupal\src\main\java\gui\eliminardocumentos\ArchivosProvider.java
 C:\Users\sound\Documents\NetBeansProjects\ReposteriaGrupal\src\main\java\gui\tarea\InicioDocente.java
+=======
+C:\Users\nicoh\Desktop\ReposteriaGrupal\src\main\java\gui\creartarea\InterfazMenu.java
+C:\Users\nicoh\Desktop\ReposteriaGrupal\src\main\java\gui\tarea\TareadeClase.java
+C:\Users\nicoh\Desktop\ReposteriaGrupal\src\main\java\gui\crearclase\InterfazClase.java
+C:\Users\nicoh\Desktop\ReposteriaGrupal\src\main\java\Franz\InterfazCalificarNotas.java
+C:\Users\nicoh\Desktop\ReposteriaGrupal\src\main\java\gui\crearclase\InterfazCrearClase.java
+C:\Users\nicoh\Desktop\ReposteriaGrupal\src\main\java\gui\tarea\InicioDocente.java
+C:\Users\nicoh\Desktop\ReposteriaGrupal\src\main\java\datosbd\Conexion.java
+C:\Users\nicoh\Desktop\ReposteriaGrupal\src\main\java\gui\crearclase\ClaseProvider.java
+C:\Users\nicoh\Desktop\ReposteriaGrupal\src\main\java\gui\InterfazNicohl.java
+C:\Users\nicoh\Desktop\ReposteriaGrupal\src\main\java\datosbd\PostreProvider.java
+C:\Users\nicoh\Desktop\ReposteriaGrupal\src\main\java\Franz\Tablontareas.java
+C:\Users\nicoh\Desktop\ReposteriaGrupal\src\main\java\gui\eliminardocumentos\Archivos.java
+C:\Users\nicoh\Desktop\ReposteriaGrupal\src\main\java\gui\tarea\EliminarTarea.java
+C:\Users\nicoh\Desktop\ReposteriaGrupal\src\main\java\gui\InterfazJessica.java
+C:\Users\nicoh\Desktop\ReposteriaGrupal\src\main\java\gui\tarea\TareaProvider.java
+C:\Users\nicoh\Desktop\ReposteriaGrupal\src\main\java\gui\creartarea\InterfazCrearTarea.java
+C:\Users\nicoh\Desktop\ReposteriaGrupal\src\main\java\gui\creartarea\TareaProvider.java
+C:\Users\nicoh\Desktop\ReposteriaGrupal\src\main\java\datosbd\ReposteriaGrupal.java
+C:\Users\nicoh\Desktop\ReposteriaGrupal\src\main\java\gui\eliminardocumentos\ArchivosProvider.java
+C:\Users\nicoh\Desktop\ReposteriaGrupal\src\main\java\gui\InterfazPrueba.java
+C:\Users\nicoh\Desktop\ReposteriaGrupal\src\main\java\gui\InterfazYawar.java
+C:\Users\nicoh\Desktop\ReposteriaGrupal\src\main\java\gui\InterfazAndrea.java
+>>>>>>> 93b7e6d77a12b7b5961b78c9b4847eec4827c5b5
