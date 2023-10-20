@@ -33,10 +33,13 @@ gui\creartarea\TareaProvider.class
 Franz\NotasCalificadas$1.class
 Franz\InterfazCalificarNotas$6.class
 gui\InterfazYawar$2.class
+<<<<<<< HEAD
 gui\tarea\InicioDocente$3.class
+=======
+gui\crearclase\Pruu$2.class
+>>>>>>> b878f126bfef96eb92786964625e0e70289f6eac
 gui\InterfazNicohl$2.class
 gui\eliminardocumentos\Archivos$2.class
-gui\tarea\InicioDocente$2.class
 Franz\InterfazCalificarNotas$3.class
 datosbd\ReposteriaGrupal.class
 Franz\InterfazCalificarNotas.class
@@ -47,15 +50,26 @@ gui\InterfazAndrea$1.class
 gui\InterfazNicohl.class
 datosbd\PostreProvider.class
 gui\crearclase\InterfazClase.class
+<<<<<<< HEAD
 Franz\InterfazCalificarNotas$7.class
 Franz\TablonTareas$1.class
 Franz\NotasCalificadas.class
+=======
+Franz\Tablontareas$2.class
+gui\crearclase\ModalClase.class
+gui\crearclase\Pruu$1.class
+>>>>>>> b878f126bfef96eb92786964625e0e70289f6eac
 gui\InterfazYawar$1.class
 gui\tarea\EliminarTarea.class
 Franz\TablonTareas$4.class
 gui\creartarea\InterfazCrearTarea$1.class
 Franz\InterfazCalificarNotas$4.class
 gui\InterfazNicohl$3.class
+<<<<<<< HEAD
+=======
+gui\crearclase\Pruu.class
+Franz\Tablontareas$3.class
+>>>>>>> b878f126bfef96eb92786964625e0e70289f6eac
 gui\tarea\EliminarTarea$1.class
 gui\InterfazPrueba.class
 gui\eliminardocumentos\Archivos$1.class
