@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author nicoh
+ * @author nicohl
  */
 public class EliminarTarea extends javax.swing.JFrame {
 String Id;
@@ -142,7 +142,8 @@ String Id;
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
-       
+       new InicioDocente().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void jTableTareaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableTareaMouseClicked
