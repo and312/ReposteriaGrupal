@@ -19,7 +19,7 @@ public class ArchivosProvider {
    
     public static Firestore db;
     
-    public static boolean crearTarea(String coleccion, String documento, Map<String, Object> data) {
+    public static boolean crearArchivos(String coleccion, String documento, Map<String, Object> data) {
         db = FirestoreClient.getFirestore();
         boolean seGuardo = false;
         
