@@ -1,7 +1,25 @@
 package Franz;
+
+import static Franz.InterfazCalificarNotas.a;
+import static Franz.InterfazCalificarNotas.b;
+import static Franz.InterfazCalificarNotas.d;
+import static Franz.InterfazCalificarNotas.e;
+import static Franz.InterfazCalificarNotas.f;
+import javax.swing.table.DefaultTableModel;
+
 public class NotasCalificadas extends javax.swing.JFrame {
     public NotasCalificadas() {
         initComponents();
+        DefaultTableModel model = new DefaultTableModel();
+        model.addColumn("Nombres");
+        model.addColumn("Apellidos");
+        model.addColumn("Notas");
+        model.addRow(new Object[]{ "Andrea", "Pelaez",a});
+        model.addRow(new Object[]{ "Yawar", "Apaza Reyes",b});
+        model.addRow(new Object[]{ "Nicolh", "Alcon Escarza",f});
+        model.addRow(new Object[]{ "Neida Jessica", "Trujillo Delgadillo",d});
+        model.addRow(new Object[]{ "Franz Eduardo", "Vidal Castellon",e});
+        jTable2.setModel(model);
     }
 
     /**
@@ -96,8 +114,8 @@ public class NotasCalificadas extends javax.swing.JFrame {
                     .addComponent(jLabel1)
                     .addComponent(jButton1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(352, 352, 352))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(296, 296, 296))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
