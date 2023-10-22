@@ -2,6 +2,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
+<<<<<<< HEAD
+=======
+package gui;
+
+import datosbd.Conexion;
+import datosbd.PostreProvider;
+import java.awt.HeadlessException;
+import java.util.HashMap;
+import java.util.Map;
+import javax.swing.JOptionPane;
+>>>>>>> 907d23779355acb7b675916a70a7a808c9252b1f
 
 /**
  *
@@ -14,8 +25,34 @@ public class InterfazJessica extends javax.swing.JFrame {
      */
     public InterfazJessica() {
         initComponents();
+<<<<<<< HEAD
     }
 
+=======
+        Conexion.conectarFirebase();
+        this.setLocationRelativeTo(null);
+    }
+    private void guardar() {
+        
+        int id = (int) (Math.random() * 100000);
+
+        try {
+            if (PostreProvider.existePostre("Postre", txtpostre.getText())) {
+                JOptionPane.showMessageDialog(null, "El postre ya existe en la base de datos.");
+                return;
+            }
+
+            Map<String, Object> datos = new HashMap<>();
+            datos.put("Nombre de postres", txtpostre.getText());
+
+            PostreProvider.guardaPostre("Postre", String.valueOf(id), datos);
+            JOptionPane.showMessageDialog(null, "Guardado con éxito");
+        } catch (HeadlessException e) {
+            System.err.println("Error" + e.getMessage());
+            JOptionPane.showMessageDialog(null, "Error al guardar");
+        }
+    }
+>>>>>>> 907d23779355acb7b675916a70a7a808c9252b1f
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -25,22 +62,89 @@ public class InterfazJessica extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+<<<<<<< HEAD
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+=======
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        txtpostre = new javax.swing.JTextField();
+        btnguardar = new javax.swing.JButton();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setBackground(new java.awt.Color(153, 153, 255));
+        jLabel1.setFont(new java.awt.Font("Swis721 Blk BT", 0, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 51, 255));
+        jLabel1.setText("POSTRES");
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel2.setText("NOMBRE");
+
+        txtpostre.setBackground(new java.awt.Color(153, 255, 255));
+
+        btnguardar.setBackground(new java.awt.Color(255, 204, 204));
+        btnguardar.setText("REGISTRAR");
+        btnguardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnguardarActionPerformed(evt);
+            }
+        });
+
+>>>>>>> 907d23779355acb7b675916a70a7a808c9252b1f
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
             .addGap(0, 400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 300, Short.MAX_VALUE)
+=======
+            .addGroup(layout.createSequentialGroup()
+                .addGap(123, 123, 123)
+                .addComponent(jLabel2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(65, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(txtpostre, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(85, 85, 85))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btnguardar)
+                        .addGap(158, 158, 158))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(42, 42, 42))))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2)
+                .addGap(26, 26, 26)
+                .addComponent(txtpostre, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addComponent(btnguardar)
+                .addGap(25, 25, 25))
+>>>>>>> 907d23779355acb7b675916a70a7a808c9252b1f
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+<<<<<<< HEAD
+=======
+    private void btnguardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnguardarActionPerformed
+       guardar(); // TODO add your handling code here:
+    }//GEN-LAST:event_btnguardarActionPerformed
+
+>>>>>>> 907d23779355acb7b675916a70a7a808c9252b1f
     /**
      * @param args the command line arguments
      */
@@ -77,5 +181,12 @@ public class InterfazJessica extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+<<<<<<< HEAD
+=======
+    private javax.swing.JButton btnguardar;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JTextField txtpostre;
+>>>>>>> 907d23779355acb7b675916a70a7a808c9252b1f
     // End of variables declaration//GEN-END:variables
 }
