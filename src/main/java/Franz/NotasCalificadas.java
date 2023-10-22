@@ -133,7 +133,7 @@ public class NotasCalificadas extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        TablonTareas obj = new TablonTareas();
+        InterfazCalificarNotas obj = new InterfazCalificarNotas();
         obj.setVisible(true);
         obj.setLocationRelativeTo(null);
         this.dispose();
