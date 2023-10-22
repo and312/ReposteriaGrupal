@@ -2,6 +2,7 @@ Franz\NotaGuardada$1.class
 gui\tarea\EliminarTarea$2.class
 Franz\InterfazCalificarNotas$5.class
 Franz\NotasCalificadas$3.class
+gui\eliminardocumentos\Archivos$7.class
 Franz\TablonTareas$3.class
 gui\crearclase\InterfazClase$1.class
 gui\InterfazAndrea.class
@@ -16,6 +17,7 @@ gui\eliminardocumentos\Archivos$3.class
 gui\tarea\InicioDocente$4.class
 Franz\InterfazCalificarNotas$2.class
 gui\crearclase\InterfazCrearClase.class
+gui\eliminardocumentos\Archivos$8.class
 gui\InterfazYawar.class
 gui\crearclase\InterfazCrearClase$1.class
 gui\tarea\EliminarTarea$3.class
@@ -24,6 +26,7 @@ Franz\NotaGuardada$2.class
 gui\crearclase\GeneracionCodigo.class
 gui\InterfazNicohl$1.class
 gui\crearclase\InterfazClase$2.class
+gui\eliminardocumentos\Archivos$6.class
 gui\crearclase\ClaseProvider.class
 Franz\TablonTareas$2.class
 gui\InterfazPrueba$2.class
@@ -36,6 +39,7 @@ gui\tarea\InicioDocente$3.class
 gui\crearclase\Pruu$2.class
 gui\InterfazNicohl$2.class
 gui\eliminardocumentos\Archivos$2.class
+gui\tarea\InicioDocente$2.class
 Franz\InterfazCalificarNotas$3.class
 datosbd\ReposteriaGrupal.class
 Franz\InterfazCalificarNotas.class

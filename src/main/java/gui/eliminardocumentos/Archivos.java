@@ -22,15 +22,18 @@ import javax.swing.JOptionPane;
  * @author Jessica Trujillo
  */
 public class Archivos extends javax.swing.JFrame {
-
+String ID;
     /**
      * Creates new form Archivos
      */
     public Archivos() {
         initComponents();
         Conexion.conectarFirebase();
-        initComponents();
+        //initComponents();
         this.setLocationRelativeTo(null);
+         ArchivosProvider.cargarTablaArchivos(jTableArchivo);
+        txtID.setEnabled(false);
+        
     }
     /*
     private void crear() {
@@ -73,7 +76,12 @@ public class Archivos extends javax.swing.JFrame {
         txtarchivos = new javax.swing.JTextArea();
         txtcrear = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        txtID = new javax.swing.JTextField();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTableArchivo = new javax.swing.JTable();
+        txtcrear1 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -91,7 +99,7 @@ public class Archivos extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(88, 88, 88))
+                .addGap(378, 378, 378))
         );
         panel2Layout.setVerticalGroup(
             panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -131,10 +139,44 @@ public class Archivos extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("VOLVER");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jLabel4.setText("ID");
+
+        txtID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                txtIDActionPerformed(evt);
+            }
+        });
+
+        jTableArchivo.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jTableArchivo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTableArchivoMouseClicked(evt);
+            }
+        });
+        jScrollPane2.setViewportView(jTableArchivo);
+
+        txtcrear1.setActionCommand("ACTUALIZAR");
+        txtcrear1.setLabel("ACTUALIZAR");
+        txtcrear1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtcrear1ActionPerformed(evt);
+            }
+        });
+
+        jButton3.setLabel("ELIMINAR");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
             }
         });
 
@@ -143,28 +185,36 @@ public class Archivos extends javax.swing.JFrame {
         panel1Layout.setHorizontalGroup(
             panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(panel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
+                .addGap(77, 77, 77)
+                .addComponent(txtcrear)
+                .addGap(87, 87, 87)
+                .addComponent(jButton1)
+                .addGap(106, 106, 106)
+                .addComponent(txtcrear1)
+                .addGap(108, 108, 108)
+                .addComponent(jButton3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(panel1Layout.createSequentialGroup()
+                .addGap(19, 19, 19)
                 .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panel1Layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panel1Layout.createSequentialGroup()
                         .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(panel1Layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addComponent(txtcrear)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panel1Layout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton2)
-                        .addGap(32, 32, 32))
-                    .addGroup(panel1Layout.createSequentialGroup()
+                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE))
+                        .addGap(52, 52, 52)
                         .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(38, Short.MAX_VALUE))))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
+                .addContainerGap(98, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 823, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(69, 69, 69))
         );
         panel1Layout.setVerticalGroup(
             panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -175,16 +225,25 @@ public class Archivos extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
                 .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtcrear)
+                    .addComponent(jLabel4)
+                    .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton2))
-                .addGap(30, 30, 30))
+                    .addComponent(txtcrear)
+                    .addComponent(txtcrear1)
+                    .addComponent(jButton3))
+                .addGap(14, 14, 14))
         );
+
+        txtcrear1.getAccessibleContext().setAccessibleName("ACTUALIZAR");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -206,7 +265,7 @@ public class Archivos extends javax.swing.JFrame {
 
     private void txtcrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcrearActionPerformed
         crear();
-       /* Strin`g nombreArchivo = txtNombre.getText();
+       /* String nombreArchivo = txtNombre.getText();
       String carpeta = System.getProperty("user.dir");
       String direccionCompleta = carpeta + "/" + nombreArchivo + ".txt";
       FileWriter ubicacion = null;
@@ -227,11 +286,25 @@ public class Archivos extends javax.swing.JFrame {
        Limpiar();  // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        InterfazClase ventanaCrearClase = new InterfazClase();
-        ventanaCrearClase.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void txtIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIDActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtIDActionPerformed
+
+    private void txtcrear1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcrear1ActionPerformed
+       actualizararchivos(); // TODO add your handling code here:
+    }//GEN-LAST:event_txtcrear1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        eliminararchivos();// TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jTableArchivoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableArchivoMouseClicked
+      int seleccion =jTableArchivo.getSelectedRow();
+      txtID.setText(jTableArchivo.getValueAt(seleccion, 0)+"");
+      txtNombre.setText(jTableArchivo.getValueAt(seleccion, 1)+"");
+      txtarchivos.setText(jTableArchivo.getValueAt(seleccion, 2)+"");
+             // TODO add your handling code here:
+    }//GEN-LAST:event_jTableArchivoMouseClicked
 
     /**
      * @param args the command line arguments
@@ -270,37 +343,91 @@ public class Archivos extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTableArchivo;
     private java.awt.Panel panel1;
     private java.awt.Panel panel2;
+    private javax.swing.JTextField txtID;
     private javax.swing.JTextField txtNombre;
     private javax.swing.JTextArea txtarchivos;
     private javax.swing.JButton txtcrear;
+    private javax.swing.JButton txtcrear1;
     // End of variables declaration//GEN-END:variables
 
  private void Limpiar() {
         txtNombre.setText("");
         txtarchivos.setText("");
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-private void crear() {
-        int id = (int) (Math.random() * 100000);
-        
+ }
+ public void crear(){
+  int id = (int) (Math.random() * 100000);
+
         try {
-            Map<String, Object> datosarchivos = new HashMap<>();
-            datosarchivos.put("SELCCIONE ARCHIVOS", txtNombre.getText());
-            datosarchivos.put("ESCRIBIR ARCHIVOS", txtarchivos.getText());
-            //datosTarea.put("Adjuntar", "");
+
+            Map<String, Object> datos = new HashMap<>();
+            datos.put("Nombre", txtNombre.getText());
+            datos.put("Descripcion", txtarchivos.getText());
             
-            ArchivosProvider.crearArchivos("Archivos", String.valueOf(id), datosarchivos);
-            JOptionPane.showMessageDialog(null, "Se guardo la tarea");
-            borrarCampos();
-        }catch(HeadlessException e) {
+
+            ArchivosProvider.guardaArchivos("Archivos", String.valueOf(id), datos);
+            JOptionPane.showMessageDialog(null, "Guardado con éxito");
+            clearForm();
+        } catch (HeadlessException e) {
+            System.err.println("Error" + e.getMessage());
             JOptionPane.showMessageDialog(null, "Error al guardar");
+        } finally{
+            ArchivosProvider.cargarTablaArchivos(jTableArchivo);
         }
     }
-}
+
+      private void actualizararchivos() {
+          String idDoc =txtID.getText();
+          
+          try {
+
+            Map<String, Object> datos = new HashMap<>();
+            datos.put("Nombre", txtNombre.getText());
+            datos.put("Descripcion", txtarchivos.getText());
+            
+
+            ArchivosProvider.actualizarArchivos("Archivos",idDoc, datos);
+            JOptionPane.showMessageDialog(null, "Actualizado con éxito");
+            clearForm();
+        } catch (HeadlessException e) {
+            System.err.println("Error" + e.getMessage());
+            JOptionPane.showMessageDialog(null, "Error al guardar");
+        } finally{
+            ArchivosProvider.cargarTablaArchivos(jTableArchivo);
+        }
+      }
+    
+    void clearForm(){
+        txtNombre.setText("");
+        txtarchivos.setText("");
+        txtID.setText("");
+       
+    }
+
+    private void eliminararchivos() {
+        String idDoc =txtID.getText();
+         try {
+            ArchivosProvider.eliminarArchivos("Archivos", idDoc);
+            JOptionPane.showMessageDialog(null, "Eliminado con éxito");
+            clearForm();
+        } catch (HeadlessException e) {
+            System.err.println("Error" + e.getMessage());
+            JOptionPane.showMessageDialog(null, "Error al eliminar");
+        }
+        finally{
+            ArchivosProvider.cargarTablaArchivos(jTableArchivo);
+        }
+    }
+
+  
+    }
