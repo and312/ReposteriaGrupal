@@ -4,13 +4,11 @@ Franz\InterfazCalificarNotas$5.class
 Franz\NotasCalificadas$3.class
 gui\eliminardocumentos\Archivos$7.class
 Franz\TablonTareas$3.class
+InterfzaJessica$1.class
 gui\crearclase\InterfazClase$1.class
 gui\InterfazAndrea.class
 gui\tarea\TareadeClase$1.class
-gui\InterfazJessica$2.class
-gui\InterfazJessica$1.class
 gui\crearclase\InterfazCrearClase$3.class
-gui\InterfazJessica.class
 Franz\NotaGuardada.class
 gui\InterfazAndrea$2.class
 gui\eliminardocumentos\Archivos$3.class
@@ -26,6 +24,7 @@ Franz\NotaGuardada$2.class
 gui\crearclase\GeneracionCodigo.class
 gui\InterfazNicohl$1.class
 gui\crearclase\InterfazClase$2.class
+InterfzaJessica$2.class
 gui\eliminardocumentos\Archivos$6.class
 gui\crearclase\ClaseProvider.class
 Franz\TablonTareas$2.class
@@ -40,8 +39,10 @@ gui\crearclase\Pruu$2.class
 gui\InterfazNicohl$2.class
 gui\eliminardocumentos\Archivos$2.class
 gui\tarea\InicioDocente$2.class
+gui\eliminardocumentos\Archivos$10.class
 Franz\InterfazCalificarNotas$3.class
 datosbd\ReposteriaGrupal.class
+gui\eliminardocumentos\Archivos$9.class
 Franz\InterfazCalificarNotas.class
 Franz\TablonTareas.class
 gui\crearclase\InterfazCrearClase$2.class
@@ -76,5 +77,6 @@ datosbd\Conexion.class
 gui\eliminardocumentos\Archivos.class
 gui\eliminardocumentos\ArchivosProvider.class
 gui\tarea\EliminarTarea$4.class
+InterfzaJessica.class
 gui\eliminardocumentos\Archivos$4.class
 gui\tarea\InicioDocente.class
