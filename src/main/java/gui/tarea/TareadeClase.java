@@ -11,6 +11,12 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
+import javax.swing.text.AttributeSet;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.DocumentFilter;
+import javax.swing.text.AbstractDocument;
+
+
 /**
  *
  * @author Yawar
@@ -21,7 +27,33 @@ public class TareadeClase extends javax.swing.JFrame {
         Conexion.conectarFirebase();
         initComponents();
         this.setLocationRelativeTo(null);
+        
+        
+        ((AbstractDocument) txtNota.getDocument()).setDocumentFilter(new DocumentFilter() {
+            @Override
+            public void replace(DocumentFilter.FilterBypass fb, int offset, int length, String text, AttributeSet attrs) throws BadLocationException {
+                String currentText = fb.getDocument().getText(0, fb.getDocument().getLength());
+                String beforeOffset = currentText.substring(0, offset);
+                String afterOffset = currentText.substring(offset);
+                String proposedText = beforeOffset + text + afterOffset;
+
+                try {
+                    int value = Integer.parseInt(proposedText);
+                    if (value >= 0 && value <= 100) {
+                        super.replace(fb, offset, length, text, attrs);  // Permitir actualización
+                    } // de lo contrario, ignorar la entrada
+                } catch (NumberFormatException e) {
+                    if (proposedText.isEmpty()) {
+                        super.replace(fb, offset, length, text, attrs);  // Permitir borrado
+                    }
+                    // de lo contrario, ignorar la entrada no numérica
+                }
+            }
+        });
+        
     }
+    
+    
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
