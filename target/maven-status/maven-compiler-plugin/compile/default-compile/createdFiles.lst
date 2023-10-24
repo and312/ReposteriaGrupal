@@ -3,7 +3,6 @@ gui\tarea\EliminarTarea$2.class
 Franz\InterfazCalificarNotas$5.class
 Franz\NotasCalificadas$3.class
 gui\eliminardocumentos\Archivos$7.class
-Franz\TablonTareas$3.class
 InterfzaJessica$1.class
 gui\crearclase\InterfazClase$1.class
 gui\InterfazAndrea.class
@@ -13,6 +12,7 @@ Franz\NotaGuardada.class
 gui\InterfazAndrea$2.class
 gui\eliminardocumentos\Archivos$3.class
 gui\tarea\InicioDocente$4.class
+Franz\InterfazCalificarNotas$11.class
 Franz\InterfazCalificarNotas$2.class
 gui\crearclase\InterfazCrearClase.class
 gui\eliminardocumentos\Archivos$8.class
@@ -25,9 +25,9 @@ gui\crearclase\GeneracionCodigo.class
 gui\InterfazNicohl$1.class
 gui\crearclase\InterfazClase$2.class
 InterfzaJessica$2.class
+Franz\InterfazCalificarNotas$9.class
 gui\eliminardocumentos\Archivos$6.class
 gui\crearclase\ClaseProvider.class
-Franz\TablonTareas$2.class
 gui\InterfazPrueba$2.class
 gui\tarea\InicioDocente$6.class
 gui\tarea\TareaProvider.class
@@ -44,7 +44,6 @@ Franz\InterfazCalificarNotas$3.class
 datosbd\ReposteriaGrupal.class
 gui\eliminardocumentos\Archivos$9.class
 Franz\InterfazCalificarNotas.class
-Franz\TablonTareas.class
 gui\crearclase\InterfazCrearClase$2.class
 gui\tarea\TareadeClase$3.class
 gui\InterfazAndrea$1.class
@@ -53,14 +52,12 @@ datosbd\PostreProvider.class
 gui\eliminardocumentos\Archivos$5.class
 gui\crearclase\InterfazClase.class
 Franz\InterfazCalificarNotas$7.class
-Franz\TablonTareas$1.class
 gui\crearclase\ModalClase.class
 gui\crearclase\Pruu$1.class
 Franz\NotasCalificadas.class
 gui\InterfazYawar$1.class
 gui\crearclase\InterfazClase$3.class
 gui\tarea\EliminarTarea.class
-Franz\TablonTareas$4.class
 Franz\InterfazCalificarNotas$4.class
 gui\InterfazNicohl$3.class
 gui\crearclase\Pruu.class
@@ -73,7 +70,9 @@ Franz\NotasCalificadas$2.class
 Franz\InterfazCalificarNotas$1.class
 gui\InterfazPrueba$1.class
 gui\tarea\InicioDocente$5.class
+Franz\InterfazCalificarNotas$8.class
 datosbd\Conexion.class
+Franz\InterfazCalificarNotas$10.class
 gui\eliminardocumentos\Archivos.class
 gui\eliminardocumentos\ArchivosProvider.class
 gui\tarea\EliminarTarea$4.class

@@ -14,6 +14,7 @@ public class NotaGuardada extends javax.swing.JFrame {
      */
     public NotaGuardada() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
