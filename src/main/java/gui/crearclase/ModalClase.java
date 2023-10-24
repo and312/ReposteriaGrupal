@@ -4,6 +4,8 @@
  */
 package gui.crearclase;
 
+import gui.tarea.InicioDocente;
+
 /**
  *
  * @author sound
@@ -37,6 +39,11 @@ public class ModalClase extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel2.setBackground(new java.awt.Color(100, 204, 197));
+        jPanel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel2MouseClicked(evt);
+            }
+        });
 
         jPanel1.setBackground(new java.awt.Color(4, 54, 74));
 
@@ -88,6 +95,11 @@ public class ModalClase extends javax.swing.JPanel {
             .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jPanel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseClicked
+        InicioDocente ventanaDocente = new InicioDocente();
+        ventanaDocente.setVisible(true);
+    }//GEN-LAST:event_jPanel2MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
